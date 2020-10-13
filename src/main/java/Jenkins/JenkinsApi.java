@@ -229,29 +229,48 @@ public class JenkinsApi {
 //        e.printStackTrace();
 //      }
 
-//    String resultIp = null;
+    String Jenkins_Crumb = null;
+    String newApiToken = null;
 //    String instance_id = "i-09e3fedea74d5b255";
-//    try {
-////      String[] cmd = new String[] { "/bin/sh", "-c", "aws ec2 describe-instances --instance-ids i-09e3fedea74d5b255 --query 'Reservations[*].Instances[*].PublicIpAddress' --output text"};
-//    String[] cmds = new String[]{"/bin/sh", "-c", "scp -i ~/.ssh/eastbay-aws-eb jenkins.yaml ubuntu@3.112.71.60:/var/jenkins_home/casc_configs/jenkins.yaml"};
-//
-//
-//      Process ps = Runtime.getRuntime().exec(cmds);
-//      System.out.println("=====upload your new jenkins yaml===");
-//
-//      BufferedReader br = new BufferedReader(new InputStreamReader(ps.getInputStream()));
-//      StringBuffer sb = new StringBuffer();
-//      String line;
-//      while ((line = br.readLine()) != null) {
-//        sb.append(line);
-//      }
-//      resultIp = sb.toString();
-//
-//      System.out.println("upload finsihed:" + resultIp);
-//
-//    } catch (Exception e) {
-//      e.printStackTrace();
-//    }
+    try {
+//      String[] cmd = new String[] { "/bin/sh", "-c", "aws ec2 describe-instances --instance-ids i-09e3fedea74d5b255 --query 'Reservations[*].Instances[*].PublicIpAddress' --output text"};
+    String[] cmds = new String[]{"/bin/sh", "-c", "curl 3.112.71.60:8080/crumbIssuer/api/xml?xpath=concat\\(//crumbRequestField,%22:%22,//crumb\\) -c cookies.txt --user 'admin:Zsy950108'"};
+
+
+      Process ps = Runtime.getRuntime().exec(cmds);
+      System.out.println("=====get jenkins_Crumb===");
+
+      BufferedReader br = new BufferedReader(new InputStreamReader(ps.getInputStream()));
+      StringBuffer sb = new StringBuffer();
+      String line;
+      while ((line = br.readLine()) != null) {
+        sb.append(line);
+      }
+      Jenkins_Crumb = sb.toString();
+
+      System.out.println(Jenkins_Crumb);
+
+
+      String[] generateFreshToken = new String[]{"/bin/sh", "-c", "curl '3.112.71.60:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken'  --data 'newTokenName=fresh-reload-token'  --user 'admin:Zsy950108' -b cookies.txt  -H " + Jenkins_Crumb + ""};
+      System.out.println("=====generate new api token===");
+      Process gengerateNewToken = Runtime.getRuntime().exec(generateFreshToken);
+      BufferedReader gengerateNewTokenData = new BufferedReader(new InputStreamReader(gengerateNewToken.getInputStream()));
+      StringBuffer apiToken = new StringBuffer();
+      String apiTokens;
+      while ((apiTokens = gengerateNewTokenData.readLine()) != null) {
+        apiToken.append(apiTokens);
+      }
+      newApiToken = apiToken.toString();
+
+      JSONObject apitokenJsonObject = JSONObject.fromObject(apiToken.toString());
+
+      System.out.println("apitokenValue:" + getFieldListFromJsonStr(apitokenJsonObject.get("data").toString(),"tokenValue").get(0));
+
+      System.out.println("newApiToken:" + newApiToken);
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
 
 
 //    jenkinsApi.getLabelNodeInfo();
