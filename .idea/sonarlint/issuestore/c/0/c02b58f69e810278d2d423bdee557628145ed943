@@ -1,0 +1,54 @@
+
+Fsquid:S1148D"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
+Fsquid:S1148l"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
+Gsquid:S1148‡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
+Dsquid:S1075'"&Remove this hard-coded path-delimiter.(ä Ö‘8ÏêÎ.
+isquid:CommentedOutCodeLineY"<This block of commented-out lines of code should be removed.(éƒ¶ô8ºß»êÎ.
+[
+squid:S106&"9Replace this use of System.out or System.err by a logger.( öÕùÿÿÿÿ8ÏêÎ.
+nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(úÀÊîúÿÿÿÿ8æÂöêÎ.
+V
+squid:S106*"9Replace this use of System.out or System.err by a logger.(€Ïòƒ8Ş¸êÎ.
+V
+squid:S106C"9Replace this use of System.out or System.err by a logger.(šÍŠÈ8Ş¸êÎ.
+isquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(Ã›¥à8’ìÌèÎ.
+nsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(·àúˆúÿÿÿÿ8Ş¤ìêÎ.
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Š¾Ãøÿÿÿÿ8Èœ†çÎ.
+Xsquid:S11416"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Ş¸êÎ.
+isquid:CommentedOutCodeLine["<This block of commented-out lines of code should be removed.(ö®˜ï8ºß»êÎ.
+[
+squid:S106x"9Replace this use of System.out or System.err by a logger.(Œ¿ªâûÿÿÿÿ8ŸÑèÎ.
+W
+squid:S106“"9Replace this use of System.out or System.err by a logger.(ÿïÑ8Ş¸êÎ.
+nsquid:CommentedOutCodeLineK"<This block of commented-out lines of code should be removed.(ÁäÌ¯ûÿÿÿÿ8Ş¸êÎ.
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(í‘š­8Èœ†çÎ.
+esquid:S2142—"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ş¸êÎ.
+Fsquid:S1148G"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(òáÒ‘8Èœ†çÎ.
+W
+squid:S106„"9Replace this use of System.out or System.err by a logger.(ÈşßÄ8Ş¸êÎ.
+isquid:CommentedOutCodeLiney"<This block of commented-out lines of code should be removed.(™Ü¿8Ş¸êÎ.
+V
+squid:S106n"9Replace this use of System.out or System.err by a logger.(ÚÅšÖ8Ş¸êÎ.
+V
+squid:S106w"9Replace this use of System.out or System.err by a logger.(‹Ëìÿ8Ş¸êÎ.
+Gsquid:S1148˜"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Â™†úÿÿÿÿ8Èœ†çÎ.
+d
+squid:S899+"BDo something with the "boolean" value returned by "createNewFile".(îÔòãÿÿÿÿÿ8Ş¸êÎ.
+\
+squid:S106›"9Replace this use of System.out or System.err by a logger.(ñ»Ñ­ûÿÿÿÿ8Ş¸êÎ.
+Gsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
+[
+squid:S106u"9Replace this use of System.out or System.err by a logger.(º³ˆ¬ùÿÿÿÿ8ŸÑèÎ.
+isquid:CommentedOutCodeLineM"<This block of commented-out lines of code should be removed.(¥‘£Õ8ºß»êÎ.
+1squid:S1220""Move this file to a named package.
+esquid:S2142€"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ş¸êÎ.
+V
+squid:S106t"9Replace this use of System.out or System.err by a logger.(Åø¬8Ş¸êÎ.
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ö°„8Èœ†çÎ.
+V
+squid:S106@"9Replace this use of System.out or System.err by a logger.(È±ü8Ş¸êÎ.
+Xsquid:S1141~"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Ş¸êÎ.
+dsquid:S2142k"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ş¸êÎ.
+³%squid:RedundantThrowsDeclarationCheck"vRemove the declaration of thrown exception 'org.quartz.SchedulerException', as it cannot be thrown from method's body.(Ç—Íîşÿÿÿÿ8âööêÎ.

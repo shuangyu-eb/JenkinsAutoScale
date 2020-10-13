@@ -1,0 +1,17 @@
+
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬Œ†óÍ.
+squid:S1450
+"^Remove the "ansibleExcuting" field and declare it as a local variable in the relevant methods.(ˆà”™ûÿÿÿÿ8‰¨ÌóÍ.
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(º³ˆ¬ùÿÿÿÿ8¬Œ†óÍ.
+8squid:S1220""Move this file to a named package.8©Ä”çÍ.
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(‹Ëìÿ8»£¹óÍ.
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Œ¿ªâûÿÿÿÿ8ˆà”óÍ.
+Vsquid:S1068
+"3Remove this unused "ansibleExcuting" private field.(ˆà”™ûÿÿÿÿ8úÙËóÍ.
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(Åø¬8¾¥¸óÍ.
+dsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8’àÔçÎ.
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8’àÔçÎ.
