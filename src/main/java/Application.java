@@ -40,8 +40,47 @@ public class Application {
 //    Thread thread = new Thread(new ThreadB());
 //    thread.start();
 
+    String Jenkins_Crumb = null;
+    String newapiTokenValue = null;
     try {
-      String[] cmd = new String[] { "/bin/sh", "-c", "curl -X POST http://admin:11034d86a4a436f1a783fbd54ce6d30bdc@3.112.71.60:8080/configuration-as-code/export -H \"ff975aedf746c3e1c68fd4ee8a3bb2ce2d07309543cf7f60d70ea08a2a445ec1\" > jenkins.yaml"};
+      String[] cmds = new String[]{"/bin/sh", "-c", "curl 3.112.71.60:8080/crumbIssuer/api/xml?xpath=concat\\(//crumbRequestField,%22:%22,//crumb\\) -c cookies.txt --user 'admin:Zsy950108'"};
+
+
+      Process ps = Runtime.getRuntime().exec(cmds);
+      System.out.println("=====get jenkins_Crumb===");
+
+      BufferedReader br = new BufferedReader(new InputStreamReader(ps.getInputStream()));
+      StringBuffer sb = new StringBuffer();
+      String line;
+      while ((line = br.readLine()) != null) {
+        sb.append(line);
+      }
+      Jenkins_Crumb = sb.toString();
+
+      System.out.println(Jenkins_Crumb);
+
+
+      String[] generateFreshToken = new String[]{"/bin/sh", "-c", "curl '3.112.71.60:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken'  --data 'newTokenName=fresh-reload-token'  --user 'admin:Zsy950108' -b cookies.txt  -H " + Jenkins_Crumb + ""};
+      System.out.println("=====generate new api token===");
+      Process gengerateNewToken = Runtime.getRuntime().exec(generateFreshToken);
+      BufferedReader gengerateNewTokenData = new BufferedReader(new InputStreamReader(gengerateNewToken.getInputStream()));
+      StringBuffer apiToken = new StringBuffer();
+      String apiTokens;
+      while ((apiTokens = gengerateNewTokenData.readLine()) != null) {
+        apiToken.append(apiTokens);
+      }
+      JSONObject apitokenJsonObject = JSONObject.fromObject(apiToken.toString());
+      newapiTokenValue = getFieldListFromJsonStr(apitokenJsonObject.get("data").toString(),"tokenValue").get(0);
+
+
+      System.out.println("newApiToken:" + newapiTokenValue);
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
+    try {
+      String[] cmd = new String[] { "/bin/sh", "-c", "curl -X POST http://admin:"+ newapiTokenValue + "@3.112.71.60:8080/configuration-as-code/export -H " + Jenkins_Crumb  +  "> jenkins.yaml"};
       System.out.println("exec configuration as code");
 
       Process ps = Runtime.getRuntime().exec(cmd);
@@ -101,7 +140,7 @@ public class Application {
     String instance_id = null;
     try {
       String[] createEc2 = new String[] { "/bin/sh", "-c", "aws ec2 run-instances \\\n"
-          + "    --launch-template LaunchTemplateId=lt-0a285a0e2349f4228,Version=10"};
+          + "    --launch-template LaunchTemplateId=lt-0a285a0e2349f4228,Version=11"};
 
       Process ps = Runtime.getRuntime().exec(createEc2);
       System.out.println("====launch ec2 through template====");
@@ -231,7 +270,7 @@ public class Application {
 
     // trigger configuration yaml reload.
     try {
-      String[] cmd = new String[] { "/bin/sh", "-c", "curl -X POST http://admin:1106c180acba0dbbdeac5dab6fe23a2a5f@3.112.71.60:8080/configuration-as-code/reload -H \"89eb8f1228b71ece7ed833b00cfe206dd92bf4e865a74c93b64f5b3c72dbc5a5\""};
+      String[] cmd = new String[] { "/bin/sh", "-c", "curl -X POST http://admin:"+ newapiTokenValue + "@3.112.71.60:8080/configuration-as-code/reload -H" + Jenkins_Crumb + ""};
 
 
       Process ps = Runtime.getRuntime().exec(cmd);
