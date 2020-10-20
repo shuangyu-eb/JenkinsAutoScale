@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ec2s>
+<ec2Instance>
+<instance_id>i-0466c22ad696bcd0d</instance_id>
+<public_id>35.72.32.117</public_id>
+<name>i-0466c22ad696bcd0d</name>
+<creation_time>20201019</creation_time>
+</ec2Instance>
+<ec2Instance>
+<instance_id>i-0bd8a6f2a3762a500</instance_id>
+<public_id>3.112.107.224</public_id>
+<name>i-0bd8a6f2a3762a500</name>
+<creation_time>2020-10-20T03:22:53.000Z</creation_time>
+</ec2Instance>
+<ec2Instance>
+<instance_id>i-0a6a0747166ba1367</instance_id>
+<public_id>18.182.7.216</public_id>
+<name>i-0a6a0747166ba1367</name>
+<creation_time>2020-10-20T03:30:18.000Z</creation_time>
+</ec2Instance>
+<ec2Instance>
+<instance_id>i-091863eec92b195c2</instance_id>
+<public_id>18.182.20.150</public_id>
+<name>i-091863eec92b195c2</name>
+<creation_time>2020-10-20T03:46:37.000Z</creation_time>
+</ec2Instance>
+</ec2s>

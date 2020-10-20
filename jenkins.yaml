@@ -3,8 +3,11 @@ credentials:
     domainCredentials:
     - credentials:
       - usernamePassword: {description: used for jenkins docker cloud, id: 71cc0856-0bbb-4c2a-ab5d-2cdfa48f4c43,
-          password: '{AQAAABAAAAAQsNqvmWyQ5ZH5TwHMXQB2i4sVZSYd2oGjEejOXKxivac=}',
+          password: '{AQAAABAAAAAQpmJgoJk7TgOmu2FTUNOk6tOVtFo/YMnIyYrYoahSu/o=}',
           scope: GLOBAL, username: jenkins}
+      - usernamePassword: {description: used for github login, id: 10d36e07-bd1f-4239-a045-c04b407bd6e1,
+          password: '{AQAAABAAAAAQtz3Ft5jNvQ4arwU3kEU+RKKuKB1iWe5WMbEHRqmyHIw=}',
+          scope: GLOBAL, username: shuangyuzhu0069@gmail.com}
 jenkins:
   agentProtocols: [JNLP4-connect, Ping]
   authorizationStrategy:
@@ -23,7 +26,16 @@ jenkins:
             sshKeyStrategy:
               manuallyConfiguredSSHKey: {credentialsId: 71cc0856-0bbb-4c2a-ab5d-2cdfa48f4c43,
                 sshHostKeyVerificationStrategy: nonVerifyingKeyVerificationStrategy}
-        dockerTemplateBase: {cpuPeriod: 0, cpuQuota: 0, image: shuangyu/jenkins-docker-env}
+        dockerTemplateBase:
+          cpuPeriod: 0
+          cpuQuota: 0
+          image: shuangyu/jenkins-docker-env
+          volumes: ['/home/ubuntu/efs:/home/jenkins/.m2/repository', '/usr/bin/docker:/usr/bin/docker',
+            '/home/ubuntu/.aws:/home/jenkins/.aws']
+          volumesString: |-
+            /home/ubuntu/efs:/home/jenkins/.m2/repository
+            /usr/bin/docker:/usr/bin/docker
+            /home/ubuntu/.aws:/home/jenkins/.aws
         instanceCapStr: '2'
         labelString: docker-cloud-test1
         name: docker-cloud-test1
@@ -110,11 +122,130 @@ jenkins:
         pullStrategy: PULL_NEVER
         pullTimeout: 300
         remoteFs: /home/jenkins
+  - docker:
+      dockerApi:
+        connectTimeout: 60
+        dockerHost: {uri: 'tcp://18.181.109.165:4243'}
+        readTimeout: 60
+      exposeDockerHost: true
+      name: docker-efs-test
+      templates:
+      - connector:
+          ssh:
+            sshKeyStrategy:
+              manuallyConfiguredSSHKey: {credentialsId: 71cc0856-0bbb-4c2a-ab5d-2cdfa48f4c43,
+                sshHostKeyVerificationStrategy: nonVerifyingKeyVerificationStrategy}
+        dockerTemplateBase:
+          cpuPeriod: 0
+          cpuQuota: 0
+          image: shuangyu/jenkins-docker-env
+          volumes: ['/home/ubuntu/efs:/home/jenkins/.m2/repository', '/usr/bin/docker:/usr/bin/docker',
+            '/home/ubuntu/.aws:/home/jenkins/.aws']
+          volumesString: |-
+            /home/ubuntu/efs:/home/jenkins/.m2/repository
+            /usr/bin/docker:/usr/bin/docker
+            /home/ubuntu/.aws:/home/jenkins/.aws
+        instanceCapStr: '2'
+        labelString: docker-efs-test
+        name: docker-efs-test
+        pullStrategy: PULL_NEVER
+        pullTimeout: 300
+        remoteFs: /home/jenkins
+  - docker:
+      dockerApi:
+        connectTimeout: 60
+        dockerHost: {uri: 'tcp://35.72.32.117:4243'}
+        readTimeout: 60
+      exposeDockerHost: true
+      name: docker-cloud-test1
+      templates:
+      - connector:
+          ssh:
+            sshKeyStrategy:
+              manuallyConfiguredSSHKey: {credentialsId: 71cc0856-0bbb-4c2a-ab5d-2cdfa48f4c43,
+                sshHostKeyVerificationStrategy: nonVerifyingKeyVerificationStrategy}
+        dockerTemplateBase: {cpuPeriod: 0, cpuQuota: 0, image: shuangyu/jenkins-docker-env}
+        instanceCapStr: '2'
+        labelString: docker-cloud-test1
+        name: docker-cloud-test1
+        pullStrategy: PULL_NEVER
+        pullTimeout: 300
+        remoteFs: /home/jenkins
+  - docker:
+      dockerApi:
+        connectTimeout: 60
+        dockerHost: {uri: 'tcp://null:4243'}
+        readTimeout: 60
+      exposeDockerHost: true
+      name: docker-cloud-test1
+      templates:
+      - connector:
+          ssh:
+            sshKeyStrategy:
+              manuallyConfiguredSSHKey: {credentialsId: 71cc0856-0bbb-4c2a-ab5d-2cdfa48f4c43,
+                sshHostKeyVerificationStrategy: nonVerifyingKeyVerificationStrategy}
+        dockerTemplateBase: {cpuPeriod: 0, cpuQuota: 0, image: shuangyu/jenkins-docker-env}
+        instanceCapStr: '2'
+        labelString: docker-cloud-test1
+        name: docker-cloud-test1
+        pullStrategy: PULL_NEVER
+        pullTimeout: 300
+        remoteFs: /home/jenkins
+  - docker:
+      dockerApi:
+        connectTimeout: 60
+        dockerHost: {uri: 'tcp://18.182.7.216:4243'}
+        readTimeout: 60
+      exposeDockerHost: true
+      name: docker-cloud-test1
+      templates:
+      - connector:
+          ssh:
+            sshKeyStrategy:
+              manuallyConfiguredSSHKey: {credentialsId: 71cc0856-0bbb-4c2a-ab5d-2cdfa48f4c43,
+                sshHostKeyVerificationStrategy: nonVerifyingKeyVerificationStrategy}
+        dockerTemplateBase: {cpuPeriod: 0, cpuQuota: 0, image: shuangyu/jenkins-docker-env}
+        instanceCapStr: '2'
+        labelString: docker-cloud-test1
+        name: docker-cloud-test1
+        pullStrategy: PULL_NEVER
+        pullTimeout: 300
+        remoteFs: /home/jenkins
+  - docker:
+      dockerApi:
+        connectTimeout: 60
+        dockerHost: {uri: 'tcp://18.182.20.150:4243'}
+        readTimeout: 60
+      exposeDockerHost: true
+      name: docker-cloud-test1
+      templates:
+      - connector:
+          ssh:
+            sshKeyStrategy:
+              manuallyConfiguredSSHKey: {credentialsId: 71cc0856-0bbb-4c2a-ab5d-2cdfa48f4c43,
+                sshHostKeyVerificationStrategy: nonVerifyingKeyVerificationStrategy}
+        dockerTemplateBase:
+          cpuPeriod: 0
+          cpuQuota: 0
+          image: shuangyu/jenkins-docker-env
+          volumes: ['/home/ubuntu/efs:/home/jenkins/.m2/repository', '/usr/bin/docker:/usr/bin/docker',
+            '/home/ubuntu/.aws:/home/jenkins/.aws']
+          volumesString: |-
+            /home/ubuntu/efs:/home/jenkins/.m2/repository
+            /usr/bin/docker:/usr/bin/docker
+            /home/ubuntu/.aws:/home/jenkins/.aws
+        instanceCapStr: '2'
+        labelString: docker-cloud-test1
+        name: docker-cloud-test1
+        pullStrategy: PULL_NEVER
+        pullTimeout: 300
+        remoteFs: /home/jenkins
   crumbIssuer:
-    standard: {excludeClientIPFromCrumb: false}
+    standard: {excludeClientIPFromCrumb: true}
   disableRememberMe: false
   labelAtoms:
   - {name: docker-cloud-test1}
+  - {name: docker-efs-test}
   - {name: master}
   markupFormatter: plainText
   mode: NORMAL
