@@ -1,0 +1,41 @@
+
+Fsquid:S1148m"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8×‰Ô.
+\
+squid:S106š"9Replace this use of System.out or System.err by a logger.(¶±¹ùÿÿÿÿ8‚ä‚¥Ô.
+Rsquid:S1172f"/Remove this unused method parameter "fileName".(‘Å°€ÿÿÿÿÿ8ËŒÔ.
+xsquid:S4435X"ZSecure this "Transformer" by either disabling external DTDs or enabling secure processing.(İ‰Ë–8¼Š·üÓ.
+dsquid:S2259y"FA "NullPointerException" could be thrown; "document" is nullable here.(äëÛ™8×‰Ô.
+nsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(Òøúÿÿÿÿ8Ü°­üÓ.
+V
+squid:S106>"9Replace this use of System.out or System.err by a logger.(ÊÃ’8™ãûöÓ.
+V
+squid:S106;"9Replace this use of System.out or System.err by a logger.(¬£Íª8™ãûöÓ.
+msquid:S2259ˆ"IA "NullPointerException" could be thrown; "transformer" is nullable here.(±ÒÏÌşÿÿÿÿ8×‰Ô.
+Fsquid:S1148`"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¼Š·üÓ.
+Fsquid:S1148v"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8äÄ£Ô.
+ysquid:S4435"ZSecure this "Transformer" by either disabling external DTDs or enabling secure processing.(İ‰Ë–8×‰Ô.
+Fsquid:S1148b"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ôû»üÓ.
+V
+squid:S106{"9Replace this use of System.out or System.err by a logger.(í”ù 8×‰Ô.
+isquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(‡×é»8Ü°­üÓ.
+gsquid:S2147_"DCombine this catch with the one at line 93, which has the same body.(ÊÊÆƒüÿÿÿÿ8¼Š·üÓ.
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü€É¤
+Fsquid:S1148^"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¼Š·üÓ.
+psquid:S2259r"MA "NullPointerException" could be thrown; "documentBuilder" is nullable here.(”ñÉúÿÿÿÿ8×‰Ô.
+bsquid:S2147a"DCombine this catch with the one at line 93, which has the same body.(ï­£Ä8Ôû»üÓ.
+isquid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(ÎåÊÿ8Ü°­üÓ.
+Gsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8×‰Ô.
+|squid:S1192:"YDefine a constant instead of duplicating this literal "ec2_creation_history.xml" 3 times.(‰¾Ğìùÿÿÿÿ8×‰Ô.
+}squid:S44353"ZSecure this "Transformer" by either disabling external DTDs or enabling secure processing.(Ÿ÷Èùùÿÿÿÿ8¨üöÓ.
+csquid:S2147u"ECombine this catch with the one at line 115, which has the same body.(ï­£Ä8äÄ£Ô.
+U
+squid:S106}"9Replace this use of System.out or System.err by a logger.(ü¢|8×‰Ô.
+usquid:S00117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­óÛ¤ıÿÿÿÿ8ÿ¯ËüÓ.
+Fsquid:S1148="#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8™ãûöÓ.
+Gsquid:S1148†"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8×‰Ô.
+psquid:S00117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àºüÉ8ç¢ÒüÓ.
+Fsquid:S1148t"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8×‰Ô.
+¥%squid:RedundantThrowsDeclarationCheck˜"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(œû¿Ø8Ï„ÄÔ.
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(–ô›œ8×‰Ô.
+nsquid:CommentedOutCodeLine%"<This block of commented-out lines of code should be removed.(ø’ Şüÿÿÿÿ8Ü°­üÓ.

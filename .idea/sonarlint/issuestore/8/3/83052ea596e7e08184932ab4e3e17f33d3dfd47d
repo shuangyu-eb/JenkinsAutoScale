@@ -1,20 +1,20 @@
 
-dsquid:S2142*"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8”À°çÎ.
-Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8”À°çÎ.
-Fsquid:S11487"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Û¯ÑçÎ.
-1squid:S1220""Move this file to a named package.
-Xsquid:S2274)":Remove this call to "wait" or move it into a "while" loop.(ŒºÙ8”À°çÎ.
-U
-squid:S1069"9Replace this use of System.out or System.err by a logger.(™ÏR8Û¯ÑçÎ.
-V
-squid:S106@"9Replace this use of System.out or System.err by a logger.(‹Ëìÿ8Û¯ÑçÎ.
-Fsquid:S1148D"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Û¯ÑçÎ.
 V
 squid:S106="9Replace this use of System.out or System.err by a logger.(Åø¬8Û¯ÑçÎ.
-Lsquid:S1068")Remove this unused "pause" private field.(¶’™²ùÿÿÿÿ8Ø‘ñçÎ.
 [
 squid:S106>"9Replace this use of System.out or System.err by a logger.(º³ˆ¬ùÿÿÿÿ8Û¯ÑçÎ.
+V
+squid:S106@"9Replace this use of System.out or System.err by a logger.(‹Ëìÿ8Û¯ÑçÎ.
 [
 squid:S106A"9Replace this use of System.out or System.err by a logger.(Œ¿ªâûÿÿÿÿ8Û¯ÑçÎ.
+Xsquid:S2274)":Remove this call to "wait" or move it into a "while" loop.(ŒºÙ8”À°çÎ.
+Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8”À°çÎ.
+1squid:S1220""Move this file to a named package.
+Lsquid:S1068")Remove this unused "pause" private field.(¶’™²ùÿÿÿÿ8Ø‘ñçÎ.
+U
+squid:S1069"9Replace this use of System.out or System.err by a logger.(™ÏR8Û¯ÑçÎ.
 Nsquid:S2446"0"notify" may not wake up the appropriate thread.(ŒâÌ†8œß¯çÎ.
 dsquid:S21426"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Û¯ÑçÎ.
+dsquid:S2142*"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8”À°çÎ.
+Fsquid:S11487"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Û¯ÑçÎ.
+Fsquid:S1148D"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Û¯ÑçÎ.

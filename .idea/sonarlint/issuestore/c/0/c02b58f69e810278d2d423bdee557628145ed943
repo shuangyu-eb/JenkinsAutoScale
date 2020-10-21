@@ -1,54 +1,103 @@
 
-Fsquid:S1148D"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
-Fsquid:S1148l"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
-Gsquid:S1148‡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
-Dsquid:S1075'"&Remove this hard-coded path-delimiter.(ä Ö‘8ÏêÎ.
-isquid:CommentedOutCodeLineY"<This block of commented-out lines of code should be removed.(éƒ¶ô8ºß»êÎ.
-[
-squid:S106&"9Replace this use of System.out or System.err by a logger.( öÕùÿÿÿÿ8ÏêÎ.
-nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(úÀÊîúÿÿÿÿ8æÂöêÎ.
-V
-squid:S106*"9Replace this use of System.out or System.err by a logger.(€Ïòƒ8Ş¸êÎ.
-V
-squid:S106C"9Replace this use of System.out or System.err by a logger.(šÍŠÈ8Ş¸êÎ.
-isquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(Ã›¥à8’ìÌèÎ.
-nsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(·àúˆúÿÿÿÿ8Ş¤ìêÎ.
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Š¾Ãøÿÿÿÿ8Èœ†çÎ.
-Xsquid:S11416"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Ş¸êÎ.
-isquid:CommentedOutCodeLine["<This block of commented-out lines of code should be removed.(ö®˜ï8ºß»êÎ.
-[
-squid:S106x"9Replace this use of System.out or System.err by a logger.(Œ¿ªâûÿÿÿÿ8ŸÑèÎ.
 W
-squid:S106“"9Replace this use of System.out or System.err by a logger.(ÿïÑ8Ş¸êÎ.
-nsquid:CommentedOutCodeLineK"<This block of commented-out lines of code should be removed.(ÁäÌ¯ûÿÿÿÿ8Ş¸êÎ.
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(í‘š­8Èœ†çÎ.
-esquid:S2142—"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ş¸êÎ.
-Fsquid:S1148G"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(òáÒ‘8Èœ†çÎ.
-W
-squid:S106„"9Replace this use of System.out or System.err by a logger.(ÈşßÄ8Ş¸êÎ.
-isquid:CommentedOutCodeLiney"<This block of commented-out lines of code should be removed.(™Ü¿8Ş¸êÎ.
-V
-squid:S106n"9Replace this use of System.out or System.err by a logger.(ÚÅšÖ8Ş¸êÎ.
-V
-squid:S106w"9Replace this use of System.out or System.err by a logger.(‹Ëìÿ8Ş¸êÎ.
-Gsquid:S1148˜"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Â™†úÿÿÿÿ8Èœ†çÎ.
-d
-squid:S899+"BDo something with the "boolean" value returned by "createNewFile".(îÔòãÿÿÿÿÿ8Ş¸êÎ.
+squid:S106Ú"9Replace this use of System.out or System.err by a logger.(‹Ëìÿ8è¤¯¦Ô.
+[
+squid:S106I"9Replace this use of System.out or System.err by a logger.(Ñİ÷êùÿÿÿÿ8è¤¯¦Ô.
 \
-squid:S106›"9Replace this use of System.out or System.err by a logger.(ñ»Ñ­ûÿÿÿÿ8Ş¸êÎ.
-Gsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ş¸êÎ.
+squid:S106ş"9Replace this use of System.out or System.err by a logger.(ñ»Ñ­ûÿÿÿÿ8è¤¯¦Ô.
+nsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(“õ‹úÿÿÿÿ8è¤¯¦Ô.
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(òú±şıÿÿÿÿ8¨¬û¥Ô.
+V
+squid:S1065"9Replace this use of System.out or System.err by a logger.(ÊÆ»è8è¤¯¦Ô.
+8squid:S1220""Move this file to a named package.8“ÚĞ‚Ó.
+Ksquid:S1481†"'Remove this unused "m4" local variable.(¦à¾Üúÿÿÿÿ8è¤¯¦Ô.
+Gsquid:S1148·"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+Ssquid:S1066Ì"/Merge this if statement with the enclosing one.(ñÕ¬öûÿÿÿÿ8è¤¯¦Ô.
+W
+squid:S106ê"9Replace this use of System.out or System.err by a logger.(›Ìùª8è¤¯¦Ô.
+esquid:S2142ã"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8è¤¯¦Ô.
+Fsquid:S1148U"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+W
+squid:S106Ñ"9Replace this use of System.out or System.err by a logger.(ÚÅšÖ8è¤¯¦Ô.
+Gsquid:S1148š"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+Jsquid:S1905Š"&Remove this unnecessary cast to "Map".(ÿñöşÿÿÿÿ8è¤¯¦Ô.
+~squid:S1149à"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰8è¤¯¦Ô.
+\
+squid:S106É"9Replace this use of System.out or System.err by a logger.(à²ñìùÿÿÿÿ8è¤¯¦Ô.
+V
+squid:S106±"9Replace this use of System.out or System.err by a logger.(´ÆéD8¨¬û¥Ô.
+\
+squid:S106Ø"9Replace this use of System.out or System.err by a logger.(º³ˆ¬ùÿÿÿÿ8¨¬û¥Ô.
+\squid:S1854¾"=Remove this useless assignment to local variable "bookAttrs".(¦Ù‹á8è¤¯¦Ô.
 [
-squid:S106u"9Replace this use of System.out or System.err by a logger.(º³ˆ¬ùÿÿÿÿ8ŸÑèÎ.
-isquid:CommentedOutCodeLineM"<This block of commented-out lines of code should be removed.(¥‘£Õ8ºß»êÎ.
-1squid:S1220""Move this file to a named package.
-esquid:S2142€"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ş¸êÎ.
+squid:S106y"9Replace this use of System.out or System.err by a logger.(Îº¶øüÿÿÿÿ8è¤¯¦Ô.
+Fsquid:S1148L"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+jsquid:CommentedOutCodeLineÜ"<This block of commented-out lines of code should be removed.(™Ü¿8è¤¯¦Ô.
+[squid:S1854¹"7Remove this useless assignment to local variable "tes".(¤¨Ãµıÿÿÿÿ8è¤¯¦Ô.
+W
+squid:S106¼"9Replace this use of System.out or System.err by a logger.(ç“˜¤8è¤¯¦Ô.
+jsquid:CommentedOutCodeLine–"<This block of commented-out lines of code should be removed.(Ü8è¤¯¦Ô.
+psquid:S2259"LA "NullPointerException" could be thrown; "newDockerCloud" is nullable here.(ªƒÚ„ÿÿÿÿÿ8è¤¯¦Ô.
+\
+squid:S106¼"9Replace this use of System.out or System.err by a logger.(…ï¼“ÿÿÿÿÿ8è¤¯¦Ô.
+Gsquid:S1148©"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
 V
-squid:S106t"9Replace this use of System.out or System.err by a logger.(Åø¬8Ş¸êÎ.
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ö°„8Èœ†çÎ.
+squid:S1063"9Replace this use of System.out or System.err by a logger.(ñ«ê€8è¤¯¦Ô.
+\
+squid:S106Ô"9Replace this use of System.out or System.err by a logger.(èù²úÿÿÿÿ8è¤¯¦Ô.
+jsquid:CommentedOutCodeLine¿"<This block of commented-out lines of code should be removed.(å²ú¨8è¤¯¦Ô.
+Fsquid:S1148~"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+}squid:S2293…"YReplace the type specification in this constructor call with the diamond operator ("<>").(ìÀÙ»ùÿÿÿÿ8è¤¯¦Ô.
+Gsquid:S1148ä"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+dsquid:S2147"ECombine this catch with the one at line 269, which has the same body.(ıàÑÎ8è¤¯¦Ô.
+[
+squid:S106g"9Replace this use of System.out or System.err by a logger.(Ç’õîıÿÿÿÿ8è¤¯¦Ô.
+Msquid:S1481¾".Remove this unused "bookAttrs" local variable.(¦Ù‹á8è¤¯¦Ô.
+Gsquid:S1148ê"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+Gsquid:S1148ì"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+Fsquid:S1148m"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+W
+squid:S106ö"9Replace this use of System.out or System.err by a logger.(ÿïÑ8è¤¯¦Ô.
+[
+squid:S106("9Replace this use of System.out or System.err by a logger.(ˆ˜ÿ‹üÿÿÿÿ8è¤¯¦Ô.
+U
+squid:S106?"9Replace this use of System.out or System.err by a logger.(—œÖp8è¤¯¦Ô.
+jsquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(Ä¢ä¿8è¤¯¦Ô.
+[
+squid:S106s"9Replace this use of System.out or System.err by a logger.(¯·±÷øÿÿÿÿ8è¤¯¦Ô.
+W
+squid:S106´"9Replace this use of System.out or System.err by a logger.(Ë©…ƒ8è¤¯¦Ô.
+\
+squid:S106Û"9Replace this use of System.out or System.err by a logger.(Œ¿ªâûÿÿÿÿ8è¤¯¦Ô.
+vsquid:S3776²"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ä·°Ğúÿÿÿÿ8è¤¯¦Ô.
+nsquid:CommentedOutCodeLine$"<This block of commented-out lines of code should be removed.(êû¯–úÿÿÿÿ8¨¬û¥Ô.
+esquid:S2142Î"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8è¤¯¦Ô.
+Lsquid:S1481¹"(Remove this unused "tes" local variable.(¤¨Ãµıÿÿÿÿ8è¤¯¦Ô.
 V
-squid:S106@"9Replace this use of System.out or System.err by a logger.(È±ü8Ş¸êÎ.
-Xsquid:S1141~"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Ş¸êÎ.
-dsquid:S2142k"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Ş¸êÎ.
-³%squid:RedundantThrowsDeclarationCheck"vRemove the declaration of thrown exception 'org.quartz.SchedulerException', as it cannot be thrown from method's body.(Ç—Íîşÿÿÿÿ8âööêÎ.
+squid:S106Q"9Replace this use of System.out or System.err by a logger.(Áæ¶”8è¤¯¦Ô.
+[
+squid:S106b"9Replace this use of System.out or System.err by a logger.(…¤§èşÿÿÿÿ8è¤¯¦Ô.
+ksquid:S1192;"HDefine a constant instead of duplicating this literal "/bin/sh" 9 times.(Ë†ë•ùÿÿÿÿ8è¤¯¦Ô.
+Zsquid:S1751¬"6Remove this "return" statement or make it conditional.(“À™–ıÿÿÿÿ8è¤¯¦Ô.
+\
+squid:S106"9Replace this use of System.out or System.err by a logger.(ªƒÚ„ÿÿÿÿÿ8è¤¯¦Ô.
+Ysquid:S1141á"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8è¤¯¦Ô.
+esquid:S2142ú"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8è¤¯¦Ô.
+Gsquid:S1148Ï"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+V
+squid:S106E"9Replace this use of System.out or System.err by a logger.(––´¸8è¤¯¦Ô.
+dsquid:S2259œ"@A "NullPointerException" could be thrown; "m3" is nullable here.(ÙéÅ»ıÿÿÿÿ8è¤¯¦Ô.
+Gsquid:S1148û"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+W
+squid:S106ç"9Replace this use of System.out or System.err by a logger.(ÈşßÄ8è¤¯¦Ô.
+[
+squid:S106<"9Replace this use of System.out or System.err by a logger.(´è²êüÿÿÿÿ8¨¬û¥Ô.
+usquid:S00117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿İè»úÿÿÿÿ8è¤¯¦Ô.
+Gsquid:S1148×"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+usquid:S001178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾åˆëıÿÿÿÿ8è¤¯¦Ô.
+gsquid:S2095¡"HUse try-with-resources or close this "FileWriter" in a "finally" clause.(©‘Ù´8è¤¯¦Ô.
+jsquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(ï’»¯8è¤¯¦Ô.
+Gsquid:S1148Ã"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è¤¯¦Ô.
+W
+squid:S106×"9Replace this use of System.out or System.err by a logger.(Åø¬8ı”« Ô.
+nsquid:CommentedOutCodeLine*"<This block of commented-out lines of code should be removed.(¼ˆ¾—şÿÿÿÿ8ôø°¦Ô.

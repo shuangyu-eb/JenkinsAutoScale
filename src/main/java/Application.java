@@ -1,5 +1,6 @@
 import static DomXml.DomXml.addNode;
 import static DomXml.DomXml.createXml;
+import static DomXml.DomXml.getInstanceIdByPublicIp;
 
 import Jenkins.JenkinsApi;
 import java.io.BufferedReader;
@@ -15,22 +16,177 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
 import org.yaml.snakeyaml.Yaml;
 
 public class Application {
   public static void main(String[] args) {
+    String[] getCurrnetCoputerInfoXml = new String[] { "/bin/sh", "-c", "curl http://3.112.71.60:8080/computer/api/xml?depth=1 --user 'admin:Zsy950108' > computer.xml" };
+    excuteCmmandLine(getCurrnetCoputerInfoXml);
+
+//    scaleOn();
+//    ThreadBoy boy = new ThreadBoy();
+//    boy.start();
+  }
+
+  public static String removeDockerCloudFromJenkinsYamlByIp (String removedIp) {
+      Map m1 = null;
+      Map m2 = null;
+      List m3 = null;
+      Map m4;
+      Yaml yaml = new Yaml();
+      File f=new File("jenkins.yaml");
+      try {
+        m1 = (Map) yaml.load(new FileInputStream(f));
+        //获取第一级键中的“details”键作为对象，进一步获取下级的键和值
+        m2 = (Map) m1.get("jenkins");
+        m3 =  (List) m2.get("clouds");
+        for (int i = 0 ; i< m3.size(); i++) {
+
+          Map m5 = (Map) m3.get(i);
+          Map m6 = (Map) m5.get("docker");
+          Map m7 = (Map) m6.get("dockerApi");
+          String rgex = "tcp://(.*?):4243";
+          System.out.println("dockerHostIp:" + getSubUtilSimple(
+              String.valueOf(m7.get("dockerHost")), rgex));
+          System.out.println("removedIp" + removedIp);
+          System.out.println("same host ip" + getSubUtilSimple(
+              String.valueOf(m7.get("dockerHost")), rgex).equals(removedIp));
+          if (getSubUtilSimple(
+              String.valueOf(m7.get("dockerHost")), rgex).equals(removedIp)) {
+            System.out.println("删除i" + i);
+            m3.remove(m3.get(i));
+            writeInYaml(f, m1);
+          };
+        }
 
 
-    scaleOn();
-    ThreadBoy boy = new ThreadBoy();
-    boy.start();
+      } catch (FileNotFoundException e) {
+        e.printStackTrace();
+      }
+
+      return removedIp;
+  }
+
+  public static List<String> getdeletableDockerClouds(List dockerClouds, final List busyDockerCloud) {
+    for (int i = 0 ; i< busyDockerCloud.size() ;i ++) {
+      dockerClouds.remove(busyDockerCloud.get(i));
+    }
+    System.out.println("getdeletableDockerClouds:" + dockerClouds);
+    return  dockerClouds;
+  }
+
+  public static void terminateEC2ByInstanceId(String instanceId) {
+    String[] terminateEc2ByInstanceId = new String[]{"/bin/sh", "-c", "aws ec2 terminate-instances --instance-ids " + instanceId};
+    excuteCmmandLine(terminateEc2ByInstanceId);
+
+  }
+
+
+
+  public static void writeInYaml (File file, Map newMap) {
+    Yaml yaml = new Yaml();
+    FileWriter fw;
+    try {
+      fw = new FileWriter(file);
+      //用snakeyaml的dump方法将map类解析成yaml内容
+      fw.write(yaml.dump(newMap));
+      //写入到文件中
+      fw.flush();
+      fw.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public static void triggerReloadJenkinsYaml(String Jenkins_Crumb, String apiTokenValue) {
+//    String Jenkins_Crumb = getNewJenkinsCrumb();
+//    String newapiTokenValue = getNewJenkinsApiToken(Jenkins_Crumb);
+    try {
+      System.out.println("=====trigger configuration yaml reload===");
+
+      String[] triggerReload = new String[] { "/bin/sh", "-c", "curl -X POST http://admin:"+ apiTokenValue + "@3.112.71.60:8080/configuration-as-code/reload -H" + Jenkins_Crumb + ""};
+
+      excuteCmmandLine(triggerReload);
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  public static String getNewJenkinsCrumb() {
+    String Jenkins_Crumb = null;
+    try {
+      String[] generateJenkinsCrumb = new String[]{"/bin/sh", "-c",
+          "curl 3.112.71.60:8080/crumbIssuer/api/xml?xpath=concat\\(//crumbRequestField,%22:%22,//crumb\\) -c cookies.txt --user 'admin:Zsy950108'"};
+      System.out.println("=====get jenkins_Crumb===");
+      Jenkins_Crumb = excuteCmmandLine(generateJenkinsCrumb);
+
+      System.out.println(Jenkins_Crumb);
+    }catch (Exception e) {
+      e.printStackTrace();
+    }
+
+    return Jenkins_Crumb;
+  }
+
+  public static String getNewJenkinsApiToken(String Jenkins_Crumb) {
+    String newApiTokenValue;
+    String[] generateFreshToken = new String[]{"/bin/sh", "-c", "curl '3.112.71.60:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken'  --data 'newTokenName=fresh-reload-token'  --user 'admin:Zsy950108' -b cookies.txt  -H " + Jenkins_Crumb + ""};
+    System.out.println("=====generate new api token===");
+    newApiTokenValue = getFieldListFromJsonStr(JSONObject.fromObject(excuteCmmandLine(generateFreshToken)).get("data").toString(),"tokenValue").get(0);
+    System.out.println("generate newApiToken successful:" + newApiTokenValue);
+    return newApiTokenValue;
+  }
+
+  public static void scaleIn() {
+    List<String> busyIps = getBusyEc2Ips();
+//    System.out.println("busyIps:" + busyIps);
+
+    List<String> dockerCloudIps = getDockerCloudsInfo();
+//    System.out.println("res:" + dockerCloudIps);
+    List<String> deletableips = getdeletableDockerClouds(dockerCloudIps,busyIps);
+
+
+    // DELETE docker cloud form jenkins.yaml
+    int overSizeNum = dockerCloudIps.size() - 5;
+    System.out.println("overSizeNum:" + overSizeNum);
+    String Jenkins_Crumb = getNewJenkinsCrumb();
+    String newapiTokenValue = getNewJenkinsApiToken(Jenkins_Crumb);
+    if (overSizeNum > 0) {
+
+      for (int i = 0; i < overSizeNum ; i ++) {
+        System.out.println("instanceID"  + getInstanceIdByPublicIp(deletableips.get(i)));
+        String deletedInstanceId = getInstanceIdByPublicIp(deletableips.get(i));
+        //terminate ec2 by instance id
+        terminateEC2ByInstanceId(deletedInstanceId);
+
+        //jenkins yaml remove docker cloud by cloud ip
+        System.out.println("instanceIp"  + deletableips.get(i));
+        removeDockerCloudFromJenkinsYamlByIp(deletableips.get(i));
+
+
+      }
+
+      uploadJenkinsYaml();
+      //trigger reload jenkins yaml
+
+      triggerReloadJenkinsYaml(Jenkins_Crumb, newapiTokenValue);
+
+    }
   }
 
   public static void scaleOn() {
@@ -42,28 +198,8 @@ public class Application {
       System.out.println("文件已存在");
     }
 
-    String Jenkins_Crumb = null;
-    String newapiTokenValue = null;
-    try {
-      String[] generateJenkinsCrumb = new String[]{"/bin/sh", "-c", "curl 3.112.71.60:8080/crumbIssuer/api/xml?xpath=concat\\(//crumbRequestField,%22:%22,//crumb\\) -c cookies.txt --user 'admin:Zsy950108'"};
-      System.out.println("=====get jenkins_Crumb===");
-      Jenkins_Crumb = excuteCmmandLine(generateJenkinsCrumb);
-
-      System.out.println(Jenkins_Crumb);
-
-
-//      String[] generateFreshToken = new String[]{"/bin/sh", "-c", "curl '3.112.71.60:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken'  --data 'newTokenName=fresh-reload-token'  --user 'admin:Zsy950108' -b cookies.txt  -H " + Jenkins_Crumb + ""};
-      String[] generateFreshToken = new String[]{"/bin/sh", "-c", "curl '3.112.71.60:8080/user/admin/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken'  --data 'newTokenName=fresh-reload-token'  --user 'admin:Zsy950108' -b cookies.txt  -H " + Jenkins_Crumb + ""};
-
-      System.out.println("=====generate new api token===");
-
-      newapiTokenValue = getFieldListFromJsonStr(JSONObject.fromObject(excuteCmmandLine(generateFreshToken)).get("data").toString(),"tokenValue").get(0);
-
-      System.out.println("newApiToken:" + newapiTokenValue);
-
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+    String Jenkins_Crumb = getNewJenkinsCrumb();
+    String newapiTokenValue = getNewJenkinsApiToken(Jenkins_Crumb);
 
     try {
       String[] exportJenkinsConfigurationYaml = new String[] { "/bin/sh", "-c", "curl -X POST http://admin:"+ newapiTokenValue + "@3.112.71.60:8080/configuration-as-code/export -H " + Jenkins_Crumb  +  "> jenkins.yaml"};
@@ -159,18 +295,7 @@ public class Application {
     }
 
     // upload new yaml
-    try {
-      String[] uploadNewYaml = new String[]{"/bin/sh", "-c", "scp -i ~/.ssh/eastbay-aws-eb jenkins.yaml ubuntu@3.112.71.60:/var/jenkins_home/casc_configs/jenkins.yaml"};
-
-
-      System.out.println("=====upload your new jenkins yaml===");
-
-      excuteCmmandLine(uploadNewYaml);
-      System.out.println("upload finsihed:");
-
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+    uploadJenkinsYaml();
 
     // trigger configuration yaml reload.
     try {
@@ -179,6 +304,22 @@ public class Application {
       String[] triggerReload = new String[] { "/bin/sh", "-c", "curl -X POST http://admin:"+ newapiTokenValue + "@3.112.71.60:8080/configuration-as-code/reload -H" + Jenkins_Crumb + ""};
 
       excuteCmmandLine(triggerReload);
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  public static void uploadJenkinsYaml() {
+    // upload new yaml
+    try {
+      String[] uploadNewYaml = new String[]{"/bin/sh", "-c", "scp -i ~/.ssh/eastbay-aws-eb jenkins.yaml ubuntu@3.112.71.60:/var/jenkins_home/casc_configs/jenkins.yaml"};
+
+
+      System.out.println("=====upload your new jenkins yaml===");
+
+      excuteCmmandLine(uploadNewYaml);
+      System.out.println("upload finsihed:");
 
     } catch (Exception e) {
       e.printStackTrace();
@@ -245,6 +386,50 @@ public class Application {
     }
   }
 
+  public static List<String> getDockerCloudsInfo() {
+    List<String> dockerClouds = null;
+    Map m1 = null;
+    Map m2 = null;
+    List m3 = null;
+    LinkedHashMap<String,LinkedHashMap<String,LinkedHashMap<String,LinkedHashMap<String,String>>>> newDockerCloud = new LinkedHashMap<String,LinkedHashMap<String,LinkedHashMap<String,LinkedHashMap<String,String>>>>();
+    Map m4;
+    Yaml yaml = new Yaml();
+    File f=new File("jenkins.yaml");
+    try {
+      m1 = (Map) yaml.load(new FileInputStream(f));
+      //获取第一级键中的“details”键作为对象，进一步获取下级的键和值
+      m2 = (Map) m1.get("jenkins");
+      m3 =  (List) m2.get("clouds");
+      dockerClouds  =  fetchDockerCloudsFromDockerCloudList(m3);
+
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
+    return dockerClouds;
+  }
+
+  private static List<String> fetchDockerCloudsFromDockerCloudList(List dockerCloudsList) {
+    List<String> dockerCloudsIp = new LinkedList<>();
+    for (int i = 0 ; i< dockerCloudsList.size(); i++) {
+
+      Map m5 = (Map) dockerCloudsList.get(i);
+      Map m6 = (Map) m5.get("docker");
+      Map m7 = (Map) m6.get("dockerApi");
+      String rgex = "tcp://(.*?):4243";
+      if (dockerCloudsIp.isEmpty()) {
+        dockerCloudsIp.add(getSubUtilSimple(
+            String.valueOf(m7.get("dockerHost")), rgex));
+      } else if (!dockerCloudsIp.contains(getSubUtilSimple(
+          String.valueOf(m7.get("dockerHost")), rgex))){
+        dockerCloudsIp.add(getSubUtilSimple(
+            String.valueOf(m7.get("dockerHost")), rgex));
+      }
+
+    }
+    return dockerCloudsIp;
+
+  }
+
 
   public static Object deepClone(Object obj) {
     try {
@@ -275,6 +460,66 @@ public class Application {
     }
     return fieldValues;
   }
+
+  /**
+   * 返回单个字符串，若匹配到多个的话就返回第一个，方法与getSubUtil一样
+   * @param soap
+   * @param rgex
+   * @return
+   */
+  public static String getSubUtilSimple(String soap, String rgex){
+    Pattern pattern = Pattern.compile(rgex);// 匹配的模式
+    Matcher m = pattern.matcher(soap);
+    while(m.find()){
+      return m.group(1);
+    }
+    return "";
+  }
+
+
+  public static List<String> getBusyEc2Ips() {
+
+    SAXReader reader = new SAXReader();
+    List<String> publicIps = new LinkedList<>();
+    try {
+      Document document = reader.read(new File("computer.xml"));
+      Element bookStore = document.getRootElement();
+      Iterator tes = bookStore.elementIterator("computer");
+      Iterator it = bookStore.elementIterator();
+      while (it.hasNext()) {
+//        System.out.println("begin");
+        Element book = (Element) it.next();
+        List<Attribute> bookAttrs = book.attributes();
+//        for (Attribute attr : bookAttrs) {
+//          System.out.println("属性名" + attr.getName() + "属性值" + attr.getValue());
+//        }
+        //解析子节点
+
+        Iterator iterator = book.elementIterator();
+        while (iterator.hasNext()) {
+          Element bookChild = (Element) iterator.next();
+//          System.out.println("节点名：" + bookChild.getName() + "节点值" + bookChild.getStringValue());
+          if (bookChild.getName() == "description") {
+//            System.out.println("description:" +  bookChild.getStringValue());
+            String rgex = "tcp://(.*?):4243";
+            if (!getSubUtilSimple(bookChild.getStringValue(), rgex).isEmpty()) {
+              if (!publicIps.contains(getSubUtilSimple(bookChild.getStringValue(), rgex))) {
+                publicIps.add(getSubUtilSimple(bookChild.getStringValue(), rgex));
+              }
+            }
+          }
+        }
+      }
+//      for (String ip: publicIps) {
+//        System.out.println("ip:" + ip);
+//      }
+    } catch (DocumentException e) {
+      e.printStackTrace();
+    }
+
+    return publicIps;
+  }
+
 
   public static String excuteCmmandLine(String[] cmmandLine) {
     Process ps = null;

@@ -1,27 +1,27 @@
 
-_squid:S1854ƒ";Remove this useless assignment to local variable "viewApi".(ñý÷Ôúÿÿÿÿ8Ê² èÍ.
-Fsquid:S1148q"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ê² èÍ.
-jsquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(ÛÎú8Ê² èÍ.
+jsquid:S1192<"GDefine a constant instead of duplicating this literal "/view/" 3 times.(¼Õš¿ùÿÿÿÿ8€×…ûÒ.
+hsquid:S1192)"JDefine a constant instead of duplicating this literal "test-view" 5 times.(ðË”Í8€×…ûÒ.
+osquid:CommentedOutCodeLine…"<This block of commented-out lines of code should be removed.(¸†áÉüÿÿÿÿ8€×…ûÒ.
+jsquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(ÛÎú8€×…ûÒ.
+osquid:CommentedOutCodeLine‰"<This block of commented-out lines of code should be removed.(Â•îÎþÿÿÿÿ8€×…ûÒ.
+isquid:CommentedOutCodeLine‹"<This block of commented-out lines of code should be removed.(äßù8€×…ûÒ.
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(âƒÀ8€×…ûÒ.
 [
-squid:S1068"9Replace this use of System.out or System.err by a logger.(µÁóíýÿÿÿÿ8Ê² èÍ.
-hsquid:S1192)"JDefine a constant instead of duplicating this literal "test-view" 5 times.(ðË”Í8Ê² èÍ.
-isquid:CommentedOutCodeLine‹"<This block of commented-out lines of code should be removed.(äßù8Ê² èÍ.
-osquid:CommentedOutCodeLine‰"<This block of commented-out lines of code should be removed.(Â•îÎþÿÿÿÿ8Ê² èÍ.
-Fsquid:S1148}"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ê² èÍ.
+squid:S1068"9Replace this use of System.out or System.err by a logger.(µÁóíýÿÿÿÿ8€×…ûÒ.
 V
-squid:S1069"9Replace this use of System.out or System.err by a logger.(ÞŸÂü8Ê² èÍ.
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ž”õ
-Psquid:S1481ƒ",Remove this unused "viewApi" local variable.(ñý÷Ôúÿÿÿÿ8Ê² èÍ.
-jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(âƒÀ8Ê² èÍ.
-jsquid:S1192<"GDefine a constant instead of duplicating this literal "/view/" 3 times.(¼Õš¿ùÿÿÿÿ8Ê² èÍ.
-Fsquid:S1148?"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ê² èÍ.
+squid:S1069"9Replace this use of System.out or System.err by a logger.(ÞŸÂü8€×…ûÒ.
 [
-squid:S106:"9Replace this use of System.out or System.err by a logger.(’Œ¨üÿÿÿÿ8Ê² èÍ.
-Rsquid:S1481"/Remove this unused "jenkinsApi" local variable.(‰­òûÿÿÿÿ8Ê² èÍ.
+squid:S106:"9Replace this use of System.out or System.err by a logger.(’Œ¨üÿÿÿÿ8€×…ûÒ.
+[
+squid:S106="9Replace this use of System.out or System.err by a logger.(úÒÍ±úÿÿÿÿ8€×…ûÒ.
 V
-squid:S106L"9Replace this use of System.out or System.err by a logger.(‹²ß°8Ê² èÍ.
-[
-squid:S106="9Replace this use of System.out or System.err by a logger.(úÒÍ±úÿÿÿÿ8Ê² èÍ.
-Fsquid:S1148N"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ê² èÍ.
-Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ê² èÍ.
-osquid:CommentedOutCodeLine…"<This block of commented-out lines of code should be removed.(¸†áÉüÿÿÿÿ8Ê² èÍ.
+squid:S106L"9Replace this use of System.out or System.err by a logger.(‹²ß°8€×…ûÒ.
+Rsquid:S1481"/Remove this unused "jenkinsApi" local variable.(‰­òûÿÿÿÿ8€×…ûÒ.
+Psquid:S1481ƒ",Remove this unused "viewApi" local variable.(ñý÷Ôúÿÿÿÿ8€×…ûÒ.
+_squid:S1854ƒ";Remove this useless assignment to local variable "viewApi".(ñý÷Ôúÿÿÿÿ8€×…ûÒ.
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ž”õ8€×…ûÒ.
+Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8€×…ûÒ.
+Fsquid:S1148?"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8€×…ûÒ.
+Fsquid:S1148N"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8€×…ûÒ.
+Fsquid:S1148q"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8€×…ûÒ.
+Fsquid:S1148}"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8€×…ûÒ.

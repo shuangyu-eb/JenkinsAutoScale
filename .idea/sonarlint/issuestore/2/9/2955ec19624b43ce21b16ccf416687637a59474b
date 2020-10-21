@@ -1,71 +1,101 @@
 
-[
-squid:S106r"9Replace this use of System.out or System.err by a logger.(Ä’ë—üÿÿÿÿ8…†©èÍ.
-isquid:CommentedOutCodeLine¥"<This block of commented-out lines of code should be removed.(¯ÚÑ8…†©èÍ.
-Fsquid:S1148>"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8…†©èÍ.
-Ssquid:S1481/"0Remove this unused "monitorData" local variable.(ˆÚ«©øÿÿÿÿ8…†©èÍ.
-Fsquid:S1148I"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8…†©èÍ.
-V
-squid:S106f"9Replace this use of System.out or System.err by a logger.(À¡ş…8…†©èÍ.
-[
-squid:S106h"9Replace this use of System.out or System.err by a logger.(£ÄùÓúÿÿÿÿ8…†©èÍ.
-osquid:CommentedOutCodeLine­"<This block of commented-out lines of code should be removed.(¬ôºßÿÿÿÿÿ8‰çşìÍ.
+Qsquid:S1481="3Remove this unused "loadStatistics" local variable.(‡ªœ˜8‹¨à„Ó.
+^squid:S18549"@Remove this useless assignment to local variable "executorList".( Õœš8‹¨à„Ó.
 \
-squid:S106¾"9Replace this use of System.out or System.err by a logger.(º³ˆ¬ùÿÿÿÿ8ÎÏ‘ñÍ.
-jsquid:CommentedOutCodeLineÚ"<This block of commented-out lines of code should be removed.(èÖ©ï8Î»åğÍ.
-Osquid:S1481)"1Remove this unused "executorList" local variable.( Õœš8…†©èÍ.
-Fsquid:S1148T"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8…†©èÍ.
-[
-squid:S106l"9Replace this use of System.out or System.err by a logger.(®¨Õşÿÿÿÿ8…†©èÍ.
-Fsquid:S1148t"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8…†©èÍ.
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(”õ
-V
-squid:S106n"9Replace this use of System.out or System.err by a logger.(¹Áã…8…†©èÍ.
-bsquid:S1854/"?Remove this useless assignment to local variable "monitorData".(ˆÚ«©øÿÿÿÿ8…†©èÍ.
-Qsquid:S1481-"3Remove this unused "loadStatistics" local variable.(‡ªœ˜8…†©èÍ.
-Fsquid:S11483"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8…†©èÍ.
-"squid:ClassVariableVisibilityCheck"YMake jenkinsServer a static final constant or non-public and provide accessors if needed.(ÛúƒÍ8ıĞ…óÍ.
-V
-squid:S106%"9Replace this use of System.out or System.err by a logger.(İÇô±8…†©èÍ.
-^squid:S1854)"@Remove this useless assignment to local variable "executorList".( Õœš8…†©èÍ.
-Gsquid:S1148Â"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÖÆñÍ.
-Gsquid:S1148—"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8…†©èÍ.
-[
-squid:S106j"9Replace this use of System.out or System.err by a logger.(ƒ“Û™ıÿÿÿÿ8…†©èÍ.
-`squid:S1854-"BRemove this useless assignment to local variable "loadStatistics".(‡ªœ˜8…†©èÍ.
+squid:S106 "9Replace this use of System.out or System.err by a logger.(ªš«İúÿÿÿÿ8‹¨à„Ó.
+jsquid:CommentedOutCodeLine¦"<This block of commented-out lines of code should be removed.(ıÔÙå8’•¥Ô.
+osquid:CommentedOutCodeLineŠ"<This block of commented-out lines of code should be removed.(Ş¾³øÿÿÿÿ8’•¥Ô.
 W
-squid:S106Œ"9Replace this use of System.out or System.err by a logger.(í’¬‰8…†©èÍ.
+squid:S106š"9Replace this use of System.out or System.err by a logger.(£æÓ¿8‹¨à„Ó.
+fsquid:UselessImportCheck	";Remove this unused import 'java.net.MalformedURLException'.(ªËŞˆ8™‘çƒÓ.
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(öÄõâÿÿÿÿÿ8’•¥Ô.
+jsquid:CommentedOutCodeLineó"<This block of commented-out lines of code should be removed.(®¡µ8é™â¥Ô.
+Gsquid:S1148§"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹¨à„Ó.
+jsquid:CommentedOutCodeLineÉ"<This block of commented-out lines of code should be removed.(ï¦šï8’•¥Ô.
+osquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(¥·£ıÿÿÿÿ8’•¥Ô.
+Osquid:S14819"1Remove this unused "executorList" local variable.( Õœš8‹¨à„Ó.
+osquid:CommentedOutCodeLineå"<This block of commented-out lines of code should be removed.(îïéùûÿÿÿÿ8’•¥Ô.
+jsquid:CommentedOutCodeLine‡"<This block of commented-out lines of code should be removed.(ûÒ£¥8’•¥Ô.
+osquid:CommentedOutCodeLineğ"<This block of commented-out lines of code should be removed.(¬ôºßÿÿÿÿÿ8’•¥Ô.
+jsquid:CommentedOutCodeLine†"<This block of commented-out lines of code should be removed.(¢Æ˜‘8’•¥Ô.
+jsquid:CommentedOutCodeLineÄ"<This block of commented-out lines of code should be removed.(ö®˜ï8’•¥Ô.
+Tsquid:S1854²"5Remove this useless assignment to local variable "i".(Ì‚ˆÌ8±Â†Ó.
+Gsquid:S1148„"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹¨à„Ó.
+osquid:CommentedOutCodeLineª"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8’•¥Ô.
+[
+squid:S106x"9Replace this use of System.out or System.err by a logger.(£ÄùÓúÿÿÿÿ8‹¨à„Ó.
+osquid:CommentedOutCodeLine¾"<This block of commented-out lines of code should be removed.(Æ¨ÄÎşÿÿÿÿ8’•¥Ô.
+osquid:CommentedOutCodeLine“"<This block of commented-out lines of code should be removed.(†Õí÷øÿÿÿÿ8’•¥Ô.
+jsquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(‡Áİ»8’•¥Ô.
+[
+squid:S106z"9Replace this use of System.out or System.err by a logger.(ƒ“Û™ıÿÿÿÿ8‹¨à„Ó.
 \
-squid:S106’"9Replace this use of System.out or System.err by a logger.(¿¼Ÿÿøÿÿÿÿ8…†©èÍ.
-osquid:CommentedOutCodeLine»"<This block of commented-out lines of code should be removed.(Æ¨ÄÎşÿÿÿÿ8Î»åğÍ.
+squid:S106¢"9Replace this use of System.out or System.err by a logger.(¿¼Ÿÿøÿÿÿÿ8‹¨à„Ó.
+\
+squid:S106Æ"9Replace this use of System.out or System.err by a logger.(Æî”Ôûÿÿÿÿ8’Üó¥Ô.
+msquid:UselessImportCheck"BRemove this unused import 'org.omg.Messaging.SYNC_WITH_TRANSPORT'.(ßÎÂÉ8ü¹ ôÓ.
+osquid:CommentedOutCodeLineû"<This block of commented-out lines of code should be removed.(“õ‹úÿÿÿÿ8’•¥Ô.
+osquid:CommentedOutCodeLineã"<This block of commented-out lines of code should be removed.(¿º—…ıÿÿÿÿ8é™â¥Ô.
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(»ÄÓ88‹¨à„Ó.
+osquid:CommentedOutCodeLine™"<This block of commented-out lines of code should be removed.(˜íÅıÿÿÿÿ8’•¥Ô.
+\
+squid:S106"9Replace this use of System.out or System.err by a logger.(ô½°Ëıÿÿÿÿ8‹¨à„Ó.
+Fsquid:S1148N"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹¨à„Ó.
+Fsquid:S1148Y"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹¨à„Ó.
+osquid:CommentedOutCodeLine­"<This block of commented-out lines of code should be removed.(¬ôºßÿÿÿÿÿ8’•¥Ô.
 W
-squid:S106Š"9Replace this use of System.out or System.err by a logger.(£æÓ¿8…†©èÍ.
-[
-squid:S106'"9Replace this use of System.out or System.err by a logger.( §ß±úÿÿÿÿ8…†©èÍ.
-jsquid:CommentedOutCodeLine·"<This block of commented-out lines of code should be removed.(ñ±™Œ8‰çşìÍ.
-jsquid:CommentedOutCodeLine¡"<This block of commented-out lines of code should be removed.(òĞîÔ8…†©èÍ.
-osquid:CommentedOutCodeLine©"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8‰çşìÍ.
+squid:S106œ"9Replace this use of System.out or System.err by a logger.(í’¬‰8‹¨à„Ó.
+V
+squid:S106v"9Replace this use of System.out or System.err by a logger.(À¡ş…8‹¨à„Ó.
+Fsquid:S1148C"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹¨à„Ó.
+Fsquid:S1148d"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹¨à„Ó.
+"squid:ClassVariableVisibilityCheck$"YMake jenkinsServer a static final constant or non-public and provide accessors if needed.(ÛúƒÍ8‹¨à„Ó.
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ğäÒ¦8’•¥Ô.
+osquid:CommentedOutCodeLine‰"<This block of commented-out lines of code should be removed.(‡èø™ıÿÿÿÿ8’•¥Ô.
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(”õ8¥Â¸úÒ.
+V
+squid:S1065"9Replace this use of System.out or System.err by a logger.(İÇô±8‹¨à„Ó.
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ü¦ƒ8’•¥Ô.
+jsquid:CommentedOutCodeLineª"<This block of commented-out lines of code should be removed.(àÕü8’•¥Ô.
+jsquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(èÖ©ï8’•¥Ô.
 \
-squid:S106"9Replace this use of System.out or System.err by a logger.(ô½°Ëıÿÿÿÿ8…†©èÍ.
-jsquid:CommentedOutCodeLine§"<This block of commented-out lines of code should be removed.(àÕü8…†©èÍ.
-osquid:CommentedOutCodeLineÜ"<This block of commented-out lines of code should be removed.(¥·£ıÿÿÿÿ8Î»åğÍ.
+squid:S106‚"9Replace this use of System.out or System.err by a logger.(Ä’ë—üÿÿÿÿ8‹¨à„Ó.
 \
-squid:S106"9Replace this use of System.out or System.err by a logger.(ªš«İúÿÿÿÿ8…†©èÍ.
-W
-squid:S106¿"9Replace this use of System.out or System.err by a logger.(ç”æ‡8ßÖ¹ñÍ.
-osquid:CommentedOutCodeLine£"<This block of commented-out lines of code should be removed.(æúëÑûÿÿÿÿ8…†©èÍ.
-U
-squid:S106}"9Replace this use of System.out or System.err by a logger.(»ÄÓ88…†©èÍ.
+squid:S106¤"9Replace this use of System.out or System.err by a logger.(œÈñ€úÿÿÿÿ8‹¨à„Ó.
+jsquid:CommentedOutCodeLineŞ"<This block of commented-out lines of code should be removed.(éƒ¶ô8’•¥Ô.
+V
+squid:S106~"9Replace this use of System.out or System.err by a logger.(¹Áã…8‹¨à„Ó.
+}squid:S2293¬"YReplace the type specification in this constructor call with the diamond operator ("<>").(çâîÀıÿÿÿÿ8±Â†Ó.
+osquid:CommentedOutCodeLineø"<This block of commented-out lines of code should be removed.(…öÑ÷üÿÿÿÿ8’•¥Ô.
+isquid:CommentedOutCodeLine¨"<This block of commented-out lines of code should be removed.(¯ÚÑ8’•¥Ô.
+jsquid:CommentedOutCodeLineí"<This block of commented-out lines of code should be removed.(©°³8’•¥Ô.
+jsquid:CommentedOutCodeLine–"<This block of commented-out lines of code should be removed.(Áùà8’•¥Ô.
 [
-squid:S106p"9Replace this use of System.out or System.err by a logger.(ÍıÉœüÿÿÿÿ8…†©èÍ.
-jsquid:CommentedOutCodeLineŞ"<This block of commented-out lines of code should be removed.(Áùà8Î»åğÍ.
+squid:S1067"9Replace this use of System.out or System.err by a logger.( §ß±úÿÿÿÿ8‹¨à„Ó.
+jsquid:CommentedOutCodeLineà"<This block of commented-out lines of code should be removed.(ö®˜ï8’•¥Ô.
+osquid:CommentedOutCodeLineˆ"<This block of commented-out lines of code should be removed.(Àú´–ûÿÿÿÿ8’•¥Ô.
+jsquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(ßÓİ¢8’•¥Ô.
 [
-squid:S106+"9Replace this use of System.out or System.err by a logger.(Úå’óûÿÿÿÿ8…†©èÍ.
-jsquid:CommentedOutCodeLineŸ"<This block of commented-out lines of code should be removed.(ßÓİ¢8…†©èÍ.
+squid:S106|"9Replace this use of System.out or System.err by a logger.(®¨Õşÿÿÿÿ8‹¨à„Ó.
+`squid:S1854="BRemove this useless assignment to local variable "loadStatistics".(‡ªœ˜8‹¨à„Ó.
+bsquid:S1854?"?Remove this useless assignment to local variable "monitorData".(ˆÚ«©øÿÿÿÿ8‹¨à„Ó.
 \
-squid:S106”"9Replace this use of System.out or System.err by a logger.(œÈñ€úÿÿÿÿ8…†©èÍ.
-jsquid:CommentedOutCodeLineÅ"<This block of commented-out lines of code should be removed.(¥‘£Õ8„²¾éÎ.
-jsquid:CommentedOutCodeLineÓ"<This block of commented-out lines of code should be removed.(éƒ¶ô8„²¾éÎ.
-jsquid:CommentedOutCodeLineÕ"<This block of commented-out lines of code should be removed.(ö®˜ï8„²¾éÎ.
-Hsquid:S1481¼")Remove this unused "cmds" local variable.(ò×´¾8„²¾éÎ.
-Wsquid:S1854¼"8Remove this useless assignment to local variable "cmds".(ò×´¾8„²¾éÎ.
+squid:S106€"9Replace this use of System.out or System.err by a logger.(ÍıÉœüÿÿÿÿ8‹¨à„Ó.
+osquid:CommentedOutCodeLine°"<This block of commented-out lines of code should be removed.(¬ôºßÿÿÿÿÿ8’•¥Ô.
+jsquid:CommentedOutCodeLineº"<This block of commented-out lines of code should be removed.(ñ±™Œ8’•¥Ô.
+osquid:CommentedOutCodeLineé"<This block of commented-out lines of code should be removed.(»¶Œ½ûÿÿÿÿ8’•¥Ô.
+jsquid:CommentedOutCodeLine¤"<This block of commented-out lines of code should be removed.(òĞîÔ8’•¥Ô.
+Gsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8’•¥Ô.
+osquid:CommentedOutCodeLine¬"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8’•¥Ô.
+~squid:S1149¼"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰8’Üó¥Ô.
+[
+squid:S106;"9Replace this use of System.out or System.err by a logger.(Úå’óûÿÿÿÿ8‹¨à„Ó.
+jsquid:CommentedOutCodeLineÇ"<This block of commented-out lines of code should be removed.(úàÑ‰8Ò£Ä¥Ô.
+osquid:CommentedOutCodeLine–"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8’•¥Ô.
+Zsquid:S1751Á"6Remove this "return" statement or make it conditional.(“À™–ıÿÿÿÿ8’•¥Ô.
+osquid:CommentedOutCodeLine¦"<This block of commented-out lines of code should be removed.(æúëÑûÿÿÿÿ8’•¥Ô.
+Ssquid:S1481?"0Remove this unused "monitorData" local variable.(ˆÚ«©øÿÿÿÿ8‹¨à„Ó.
+Gsquid:S1148È"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8’Üó¥Ô.
+¥%squid:RedundantThrowsDeclarationCheckÆ"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(œû¿Ø8…¦¦Ô.
+osquid:CommentedOutCodeLineß"<This block of commented-out lines of code should be removed.(Ê”£€úÿÿÿÿ8…¦¦Ô.

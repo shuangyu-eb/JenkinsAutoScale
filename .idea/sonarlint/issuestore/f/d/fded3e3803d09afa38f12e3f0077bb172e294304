@@ -1,0 +1,93 @@
+
+\
+squid:S106¡"9Replace this use of System.out or System.err by a logger.(˜Ğ¥‚üÿÿÿÿ8ï¯ğúÒ.
+Qsquid:S1481*".Remove this unused "lastBuild" local variable.(çò¸¯üÿÿÿÿ8ï¯ğúÒ.
+Rsquid:S1481"/Remove this unused "jenkinsApi" local variable.(‰­òûÿÿÿÿ8ï¯ğúÒ.
+W
+squid:S106§"9Replace this use of System.out or System.err by a logger.(ô’š²8ï¯ğúÒ.
+U
+squid:S106r"9Replace this use of System.out or System.err by a logger.(àÙQ8ï¯ğúÒ.
+fsquid:S1854."CRemove this useless assignment to local variable "lastFailedBuild".(Ç£ÜÉÿÿÿÿÿ8ï¯ğúÒ.
+gsquid:S18546"IRemove this useless assignment to local variable "lastUnsuccessfulBuild".(„üéÒ8ï¯ğúÒ.
+[
+squid:S106b"9Replace this use of System.out or System.err by a logger.(˜Ğ¥‚üÿÿÿÿ8ï¯ğúÒ.
+osquid:CommentedOutCodeLineó"<This block of commented-out lines of code should be removed.(¥ƒ´ñşÿÿÿÿ8¯øûÒ.
+Fsquid:S1148y"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ï¯ğúÒ.
+Gsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ï¯ğúÒ.
+\
+squid:S106®"9Replace this use of System.out or System.err by a logger.(ÎæÒúÿÿÿÿ8ï¯ğúÒ.
+Ssquid:S1481R"0Remove this unused "numberBuild" local variable.(ı¸÷»øÿÿÿÿ8ï¯ğúÒ.
+Gsquid:S1148ì"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ï¯ğúÒ.
+jsquid:CommentedOutCodeLine÷"<This block of commented-out lines of code should be removed.(€˜Œ­8¯øûÒ.
+jsquid:CommentedOutCodeLineÿ"<This block of commented-out lines of code should be removed.(Ö¼º8¯øûÒ.
+W
+squid:S106"9Replace this use of System.out or System.err by a logger.(’Ò²€8ï¯ğúÒ.
+\
+squid:S106Î"9Replace this use of System.out or System.err by a logger.(ë÷•ƒøÿÿÿÿ8ï¯ğúÒ.
+jsquid:CommentedOutCodeLineõ"<This block of commented-out lines of code should be removed.(—ˆˆò8¯øûÒ.
+Wsquid:S14812"4Remove this unused "lastStableBuild" local variable.(€ïé¨ùÿÿÿÿ8ï¯ğúÒ.
+\
+squid:S106‡"9Replace this use of System.out or System.err by a logger.(®¡éùÿÿÿÿÿ8ï¯ğúÒ.
+\
+squid:S106‰"9Replace this use of System.out or System.err by a logger.(˜Ğ¥‚üÿÿÿÿ8ï¯ğúÒ.
+\
+squid:S106æ"9Replace this use of System.out or System.err by a logger.(å¡Ü»şÿÿÿÿ8ï¯ğúÒ.
+Xsquid:S14816":Remove this unused "lastUnsuccessfulBuild" local variable.(„üéÒ8ï¯ğúÒ.
+W
+squid:S106Ÿ"9Replace this use of System.out or System.err by a logger.(¶ˆé8ï¯ğúÒ.
+W
+squid:S106°"9Replace this use of System.out or System.err by a logger.(›Ü÷¬8ï¯ğúÒ.
+Zsquid:S14810"7Remove this unused "lastCompletedBuild" local variable.(’Óã¦üÿÿÿÿ8ï¯ğúÒ.
+jsquid:CommentedOutCodeLineı"<This block of commented-out lines of code should be removed.(£¯æä8¯øûÒ.
+W
+squid:S106à"9Replace this use of System.out or System.err by a logger.(£»²°8ï¯ğúÒ.
+\
+squid:S106²"9Replace this use of System.out or System.err by a logger.(ºÅ»…úÿÿÿÿ8ï¯ğúÒ.
+Fsquid:S1148e"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ï¯ğúÒ.
+Wsquid:S1481."4Remove this unused "lastFailedBuild" local variable.(Ç£ÜÉÿÿÿÿÿ8ï¯ğúÒ.
+bsquid:S1854R"?Remove this useless assignment to local variable "numberBuild".(ı¸÷»øÿÿÿÿ8ï¯ğúÒ.
+Rsquid:S1481D"/Remove this unused "firstBuild" local variable.(å®Üåøÿÿÿÿ8ï¯ğúÒ.
+\
+squid:S106¥"9Replace this use of System.out or System.err by a logger.(±ÙÏ‚ıÿÿÿÿ8ï¯ğúÒ.
+Fsquid:S11488"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ï¯ğúÒ.
+Ysquid:S14814"6Remove this unused "lastUnstableBuild" local variable.(¢ì²ƒøÿÿÿÿ8ï¯ğúÒ.
+hsquid:S18544"ERemove this useless assignment to local variable "lastUnstableBuild".(¢ì²ƒøÿÿÿÿ8ï¯ğúÒ.
+Xsquid:S1068"5Remove this unused "jenkinsHttpClient" private field.(™—êµùÿÿÿÿ8ï¯ğúÒ.
+asquid:S1854D">Remove this useless assignment to local variable "firstBuild".(å®Üåøÿÿÿÿ8ï¯ğúÒ.
+\
+squid:S106Ç"9Replace this use of System.out or System.err by a logger.(¶Ğµüÿÿÿÿ8ï¯ğúÒ.
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(”õ8¶™ğúÒ.
+\
+squid:S106¯"9Replace this use of System.out or System.err by a logger.(¸¢Ğµùÿÿÿÿ8ï¯ğúÒ.
+\
+squid:S106Ğ"9Replace this use of System.out or System.err by a logger.(ë‡¸ûÿÿÿÿ8ï¯ğúÒ.
+osquid:CommentedOutCodeLine‹"<This block of commented-out lines of code should be removed.(ŒÀ«‰ÿÿÿÿÿ8ï¯ğúÒ.
+`squid:S1854*"=Remove this useless assignment to local variable "lastBuild".(çò¸¯üÿÿÿÿ8ï¯ğúÒ.
+\
+squid:S106Å"9Replace this use of System.out or System.err by a logger.(¿ÓÓŸøÿÿÿÿ8ï¯ğúÒ.
+\
+squid:S106Ì"9Replace this use of System.out or System.err by a logger.(›¡ÔĞÿÿÿÿÿ8ï¯ğúÒ.
+Vsquid:S1481,"8Remove this unused "lastSuccessfulBuild" local variable.(Ì°­”8ï¯ğúÒ.
+Fsquid:S1148F"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ï¯ğúÒ.
+jsquid:CommentedOutCodeLineù"<This block of commented-out lines of code should be removed.(‡£˜ä8¯øûÒ.
+fsquid:S18542"CRemove this useless assignment to local variable "lastStableBuild".(€ïé¨ùÿÿÿÿ8ï¯ğúÒ.
+esquid:S2142ë"FEither re-interrupt this method or rethrow the "InterruptedException".(ò¶È8ï¯ğúÒ.
+isquid:S18540"FRemove this useless assignment to local variable "lastCompletedBuild".(’Óã¦üÿÿÿÿ8ï¯ğúÒ.
+Gsquid:S1148µ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ï¯ğúÒ.
+[
+squid:S106v"9Replace this use of System.out or System.err by a logger.(˜Ğ¥‚üÿÿÿÿ8ï¯ğúÒ.
+W
+squid:S106±"9Replace this use of System.out or System.err by a logger.(ØıŞÍ8ï¯ğúÒ.
+esquid:S1854,"GRemove this useless assignment to local variable "lastSuccessfulBuild".(Ì°­”8ï¯ğúÒ.
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(É¨ÍÜùÿÿÿÿ8ï¯ğúÒ.
+osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(­ó³­ùÿÿÿÿ8¯øûÒ.
+Gsquid:S1148Ò"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ï¯ğúÒ.
+jsquid:CommentedOutCodeLineû"<This block of commented-out lines of code should be removed.(µäÛí8¯øûÒ.
+W
+squid:S106£"9Replace this use of System.out or System.err by a logger.(æ¼ü©8ï¯ğúÒ.
+W
+squid:S106©"9Replace this use of System.out or System.err by a logger.(¸¦¢8ï¯ğúÒ.
+Fsquid:S1148T"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ï¯ğúÒ.
+lsquid:S1192("IDefine a constant instead of duplicating this literal "test-job" 8 times.(œÀšßıÿÿÿÿ8ï¯ğúÒ.
+W
+squid:S106­"9Replace this use of System.out or System.err by a logger.(ÃŒÙ8ï¯ğúÒ.

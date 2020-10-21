@@ -149,9 +149,101 @@ public class DomXml {
   }
 
 
+  public static String getInstanceIdByPublicIp(String ip) {
+    String instanceId = null;
+
+    DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+    DocumentBuilder documentBuilder = null;
+    try {
+      documentBuilder = documentBuilderFactory.newDocumentBuilder();
+      Document document = null;
+
+      document = documentBuilder.parse("ec2_creation_history.xml");
+
+      NodeList nodes = document.getElementsByTagName("ec2Instance");
+
+//      System.out.println("ip in getInstanceIdByPublicIp:" + ip);
+      for (int i = 0 ; i < nodes.getLength() ; i ++) {
+//        System.out.println("nodes" + i + ":" + nodes.item(i).getChildNodes().item(3).getTextContent());
+        Element nodeParent = (Element) nodes.item(i).getParentNode();
+//        System.out.println("nodeParent:" + nodes.item(i).getChildNodes().item(3).getTextContent());
+        if (nodes.item(i).getChildNodes().item(3).getTextContent().equals(ip)) {
+//          System.out.println("remove node" + nodes.item(i).getChildNodes().item(5).getTextContent());
+          instanceId = nodes.item(i).getChildNodes().item(5).getTextContent();
+//          System.out.println("instanceId:" + instanceId);
+//          if (!instanceId.isEmpty()){
+//            nodeParent.removeChild(nodes.item(i));
+////            updateXml("ec2_creation_history.xml");
+//            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+//          Transformer transformer = null;
+//          try {
+//            transformer = transformerFactory.newTransformer();
+//          } catch (TransformerConfigurationException e) {
+//            e.printStackTrace();
+//          }
+//          transformer.setOutputProperty("encoding", "utf-8");
+//          transformer.setOutputProperty("indent", "yes");
+//          try {
+//            transformer.transform(new DOMSource(document), new StreamResult("ec2_creation_history.xml"));
+//          } catch (TransformerException e) {
+//            e.printStackTrace();
+//          }
+//          }
+
+        }
+
+
+      }
+
+      System.out.println("instance_id:" + instanceId);
+
+      return instanceId;
+    } catch (ParserConfigurationException e) {
+      e.printStackTrace();
+    } catch (SAXException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return instanceId;
+  }
+
+//  public static void updateXml(String xmlName) {
+//    DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+//    DocumentBuilder documentBuilder = null;
+//    try {
+//      documentBuilder = documentBuilderFactory.newDocumentBuilder();
+//      Document document = null;
+//      document = documentBuilder.parse(xmlName);
+//      TransformerFactory transformerFactory = TransformerFactory.newInstance();
+//      Transformer transformer = null;
+//      try {
+//        transformer = transformerFactory.newTransformer();
+//      } catch (TransformerConfigurationException e) {
+//        e.printStackTrace();
+//      }
+//      transformer.setOutputProperty("encoding", "utf-8");
+//      transformer.setOutputProperty("indent", "yes");
+//      try {
+//        transformer.transform(new DOMSource(document), new StreamResult(xmlName));
+//      } catch (TransformerException e) {
+//        e.printStackTrace();
+//      }
+//    } catch (ParserConfigurationException e) {
+//      e.printStackTrace();
+//    } catch (SAXException e) {
+//      e.printStackTrace();
+//    } catch (IOException e) {
+//      e.printStackTrace();
+//    }
+//
+//  }
+
   public static void main(String[] args) throws IOException {
     Long start = System.currentTimeMillis();
     System.out.println("运行时间："+ (System.currentTimeMillis() - start));
+    getInstanceIdByPublicIp("18.182.7.216");
   }
 
 
